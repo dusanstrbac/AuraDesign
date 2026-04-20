@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom Scrollbar za Aura Design */
+::-webkit-scrollbar {
+  width: 6px; /* Jako tanak */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Pozadina scrollbar-a */
+::-webkit-scrollbar-track {
+  background: #0a0a0a; /* Boja tvog background-a */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* "Ručica" scrollbar-a */
+::-webkit-scrollbar-thumb {
+  background: #222; /* Suptilna siva koja se jedva vidi na crnom */
+  border-radius: 10px;
+  transition: background 0.3s ease;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hover efekat na scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: #444; /* Malo posvetli kad se pređe mišem */
+}
+
+/* Za Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #222 #0a0a0a;
+}
+
+/* Custom Scrollbar - Aura Gold Edition */
+::-webkit-scrollbar {
+  width: 5px; /* Još malo tanji za maksimalnu eleganciju */
+}
+
+/* Pozadina prati tvoj "Premium Dark" background */
+::-webkit-scrollbar-track {
+  background: #0a0a0a; 
+}
+
+/* Ručica u boji starog zlata */
+::-webkit-scrollbar-thumb {
+  background: #4a3f28; /* Tamna, zagasita zlatna (Muted Gold) */
+  border-radius: 20px;
+  border: 1px solid #0a0a0a; /* Pravi mali razmak da deluje još tanje */
+}
+
+/* Suptilni sjaj na hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7a653a; /* Nešto svetlija zlatna kad se interaguje */
+}
+
+/* Podrška za Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a3f28 #0a0a0a;
 }
